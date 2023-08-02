@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="formcont.js"></script>
+        <style type="text/css">
+            *
+            {
+                margin: 0;
+                padding: 0
+            }
+            .tabs {
+    overflow: hidden;
+    background-image:linear-gradient(black,black);
+}
+
+.tabs a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left:2%;
+  font-family: "Malgun Gothic", "Malgun Gothic";
+  
+}
+
+.tabs a:hover {
+    background-color: black;
+    color: rgb(133,11,50);
+}
+            body{
+                
+                background-size: 280%;
+                background-position: -400px 0px;
+            }
+            div.main{
+                width:400px;
+                 margin: 100px auto 0px auto;
+            }
+            h2{
+                text-align: center;
+                padding: 20px;
+                font-family: sans-serif;
+            }
+            div.register{
+                background-color: rgba(0,0,0,0.5);
+                width: 200%;
+                font-size: 20px;
+                border-radius: 20px;
+                border: 1px solid rgba(173, 171, 171, 0.747);
+                box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+                color: #fff;
+                margin-left: -50%;
+            }
+            form#register
+            {
+                margin: 20px;
+            }
+            label{
+                margin: 0.2cm;
+                display: inline-block;
+                font-size: 20px;
+                font-family: "Malgun Gothic", "Malgun Gothic";
+                font-weight: bold;
+            }
+            input[type="text"]{
+                padding: 4px;
+                margin:5px;
+                width:7cm;
+            }
+            input[type="text"]
+            {
+                width: 700px;
+                height: 30px;
+                color: white;
+                font-size: 20px;
+                display: inline-block;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                outline: 0;
+                padding: 7px;
+                background-image:linear-gradient(rgb(133,11,50),rgba(115,18,132,255));
+                box-shadow: inset 5px 1px 5px rgba(0,0,0,0.3);
+            }
+            
+            input[type=text]:focus
+            {
+                background-color: white;
+            }
+            input[type="submit"]{
+                margin:8px;
+                width:6cm;
+                height: 1.5cm;
+                padding: 5px;
+                font-size: 20px;
+                font-family: "Malgun Gothic", "Malgun Gothic";
+                font-weight: bold;
+                border: none;
+                box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+                background-image:linear-gradient(rgb(133,11,50),rgba(115,18,132,255));
+                color: white;
+                cursor: pointer;
+                border:1px solid black;
+                box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+               
+            }
+            label,h2{
+                text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+            }
+            input[type="radio"]
+            {
+                margin-left:2px;
+            }
+            ::placeholder{
+                color:rgba(228, 222, 222, 0.781);
+                text-align: start;           
+            }
+            textarea{
+                padding: 4px;
+                margin:5px;
+                width:7cm;
+                width: 700px;
+                height: 100px;
+                color: white;
+                font-size: 20px;
+                display: inline-block;
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                outline: 0;
+                padding: 7px;
+                background-image:linear-gradient(rgb(133,11,50),rgba(115,18,132,255));
+                box-shadow: inset 5px 1px 5px rgba(0,0,0,0.3);
+            }
+            
+           
+        </style>
+    </head>
+    <body style="size:500px; height:auto; background:url('walll.jpeg') no-repeat fixed; background-size:cover" onload="firstfocus();">
+        <div class="tabs">
+        <a href="index.html" >Home</a>
+        <a href="meena.html">Technical Events</a>
+        <a href="meenant.html">Non Technical Events</a>
+        <a href="meenaws.html">Workshop</a>
+        <a href="symcontact.html">Contact</a>
+        </div>
+        <div class="main">
+            <div class="register">
+               
+                <h2>Contact Us</h2>
+                <form id="register" name="contactform" method="post" onsubmit="return validateForm()">
+                    <label>First Name:</label><br>
+                    <input type="text" name="fname" placeholder="Enter your first name" onblur="fnameval()" id="fnameerr">
+                    <br><br>
+                    <label>Last Name:</label><br>
+                    <input type="text" name="lname" placeholder="Enter your last name" onblur="lnameval()" id="lnameerr">
+                    <br><br>
+                    <label>Email id:</label><br>
+                    <input type="text" name="email" placeholder="Enter your mail address" onblur="emailval()">
+                    <br><br>
+                    
+                    <label>Phone Number:</label><br>     
+                    <input type="text" name="phone" placeholder="Enter phone number" onblur="phoneval()"><br><br>
+                    <label>Comment:</label><br>
+                    <textarea rows="4" cols="50" name="comment"></textarea>
+                    <br><br>
+                    
+                    <center>
+                        <input type="submit" value="Submit" name="submit" id="submit">
+                    </center>
+
+                </form>
+               
+            </div>
+        </div>
+    </body>
+</html>

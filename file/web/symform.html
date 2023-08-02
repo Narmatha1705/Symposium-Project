@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validateForm.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        body {
+            background: url("connection.jpg");
+            background-size: 280%;
+            background-position: -400px 0px;
+        }
+        
+        div.main {
+            width: 400px;
+            margin: 100px auto 0px auto;
+        }
+        
+        h2 {
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        
+        div.register {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 200%;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(173, 171, 171, 0.747);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            margin-left: -50%;
+        }
+        
+        form#register {
+            margin: 20px;
+        }
+        
+        label {
+            margin: 0.2cm;
+            display: inline-block;
+            font-size: 20px;
+            font-family: "Malgun Gothic", "Malgun Gothic";
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            padding: 4px;
+            margin: 5px;
+            width: 7cm;
+        }
+        
+        input[type="text"] {
+            width: 700px;
+            height: 30px;
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            outline: 0;
+            padding: 7px;
+            background-image: linear-gradient(rgb(133,11,50), rgba(115,18,132,255));
+            box-shadow: inset 5px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        input[type=text]:focus {
+            background-color: white;
+        }
+        
+        input[type="submit"] {
+            margin: 8px;
+            width: 6cm;
+            height: 1.5cm;
+            padding: 5px;
+            font-size: 20px;
+            font-family: "Malgun Gothic", "Malgun Gothic";
+            font-weight: bold;
+            border: none;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(rgb(133,11,50), rgba(115,18,132,255));
+            color: white;
+            cursor: pointer;
+            border: 1px solid black;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        label,
+        h2 {
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        input[type="radio"] {
+            margin-left: 2px;
+        }
+        
+         ::placeholder {
+            color: rgba(228, 222, 222, 0.781);
+        }
+        
+        select {
+            overflow: hidden;
+            margin: 8px;
+            width: 6cm;
+            height: 1.5cm;
+            padding: 5px;
+            font-size: 20px;
+            font-family: "Malgun Gothic", "Malgun Gothic";
+            font-weight: bold;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(rgb(133,11,50), rgba(115,18,132,255));
+            border: 1px solid rgba(173, 171, 171, 0.747);
+            cursor: pointer;
+            border: 1px solid white;
+            color: white;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        select
+    </style>
+</head>
+
+<body style="size:500px; height:auto; background:url('walll.jpeg') no-repeat fixed; background-size:cover">
+    <div class="main">
+        <div class="register">
+
+            <h2>Register Here</h2>
+            <form id="register" name="regform" method="post" action="studentdetails">
+                <label>First Name:</label><br>
+                <input type="text" name="name" placeholder="Enter your first name">
+                <div class="error" id="nameErr"></div>
+                <br><br>
+                <label>Last Name:</label><br>
+                <input type="text" name="lname" placeholder="Enter your last name">
+                <div class="error" id="nameErr"></div>
+                <br><br>
+                <label>Email id:</label><br>
+                <input type="text" name="email" placeholder="Enter your mail address">
+                <div class="error" id="emailErr"></div>
+                <br><br>
+                <label>Year of Study:</label><br>
+                <label> <input type="radio" name="year" value="1"> First year</label><br>
+                <label> <input type="radio" name="year" value="2"> Second Year</label><br>
+                <label> <input type="radio" name="year" value="3"> Third Year</label><br>
+                <label> <input type="radio" name="year" value="4"> Fourth Year</label>
+                <div class="error" id="yearErr"></div>
+                <br>
+                <label>College:</label><br>
+                <input type="text" name="college" placeholder="Enter college name">
+                <div class="error" id="collegeErr"></div>
+                <br><br>
+                <label>Department:</label><br>
+                <select name="dept">
+                        <option> Select</option>
+                        <option>CSE</option>
+                        <option>IT</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>MECH</option>
+                        
+                    </select>
+                <div class="error" id="deptErr"></div>
+                <br><br>
+                <label>Phone Number:</label><br>
+                <input type="text" name="phone" placeholder="Enter phone number"><br><br>
+                <div class="error" id="phoneErr"></div>
+                <center>
+                    <input type="submit" value="Submit" name="submit" id="submit">
+                </center>
+
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

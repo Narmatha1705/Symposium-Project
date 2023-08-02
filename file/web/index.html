@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symposium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+            $('h3').mousemove(function(e){
+                var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+                var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+                $('h3').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(223, 19, 223, 0.842), '+rYP/8+'px '+rXP/60+'px black, '+rXP/70+'px '+rYP/12+'px rgba(130, 37, 206, 0.815)');
+            });
+            });
+    </script>
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        
+.tabs {
+    overflow: hidden;
+    background-image:linear-gradient(black,black);
+}
+
+.tabs a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left:2%;
+  font-family: "Malgun Gothic", "Malgun Gothic";
+  
+}
+
+.tabs a:hover {
+    background-color: black;
+    color: rgb(133,11,50);
+}
+
+
+ 
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}   
+
+.content{
+  width:100%;
+  margin: auto;
+  text-align: left;
+  padding-top: 100px;
+  background-attachment: fixed;
+}
+
+
+body{
+  background-color: black;
+ margin: 0;
+padding: 0;
+}
+
+.header{
+min-height: 100vh;
+width: 100%;
+background-size: cover;
+position: relative;
+}   
+
+.content{
+width:100%;
+margin: auto;
+text-align: left;
+padding-top: 100px;
+background-attachment: fixed;
+}
+
+
+.text{
+padding-top:5%;
+padding-left:10%;
+padding-right: 10%;
+font-family: "Malgun Gothic", "Malgun Gothic";
+padding-bottom:5%;
+text-align: justify;
+}
+
+
+
+
+.bg1{
+color: white;
+}
+.border{
+border-style: solid;
+border-color:rgb(133,11,50);
+margin-top:-3%;
+}
+
+#contact{
+background-image:linear-gradient(180deg,rgb(133,11,50),rgba(115,18,132,255));
+left: 0;
+bottom: 0;
+width: 100%;
+
+}
+.contact1{
+color: white;
+font-family: "Malgun Gothic", "Malgun Gothic";
+font-size: 20px;
+text-align: center;
+padding-bottom: 2%;
+padding-top: 1%;
+}
+.icon{
+  color: white;
+  text-decoration: none;
+}
+iframe{
+  filter: invert(100%);
+}
+.reveal{
+position: relative;
+transform: translateY(150px);
+opacity: 0;
+transition: 1s all ease;
+}
+
+.reveal.active{
+transform: translateY(0);
+opacity: 1;
+}
+
+html{
+scroll-behavior: smooth;
+}
+.logo{
+float:right;
+margin-right: -40%;
+
+}*/
+
+body{
+  background-color: black;
+ margin: 0;
+padding: 0;
+}
+img{
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  width: 100%;
+  height: auto;
+	
+  
+  position: fixed;
+  
+}
+.neon{
+  font-family: 'Tangerine', serif;
+  font-size:250px;
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  color: white;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px rgb(133,11,50),
+      0 0 21px rgb(133,11,50),
+      0 0 42px rgb(133,11,50),
+      0 0 82px rgb(133,11,50),
+      0 0 92px rgb(133,11,50),
+      0 0 102px rgb(133,11,50),
+      0 0 151px #fff;
+}
+.dept{
+    font-family: Comic Sans MS;
+    font-size:50px;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    left: 15%;
+    font-weight: 400;
+    color: white;
+      text-shadow:
+        0 0 7px #fff,
+        0 0 10px rgb(133,11,50),
+        0 0 21px rgb(133,11,50),
+        0 0 42px rgb(133,11,50),
+        0 0 82px rgb(133,11,50),
+        0 0 92px rgb(133,11,50),
+        0 0 102px rgb(133,11,50),
+        0 0 151px #fff;
+  }
+  
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		/*text-shadow: none;*/
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+#contentt{
+    background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.342),black);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    animation: color 9s infinite linear;
+}
+@keyframes color {
+    0%   { background: #90031d7a; }
+    20%  { background: #5e107b7a; }
+    40%  { background: #51050d80; }
+    60%  { background: #20003980; }
+    80%  { background: #7b088683; }
+    100% { background: #430c5f7c; }
+  }
+  #incon{
+    background-color: rgba(0, 0, 0, 0.493);
+    padding: 2%;
+    border-radius: 2rem;
+  }
+  .c1{
+    text-align: center;
+    border: 0.2rem solid rgb(133,11,50);
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem rgb(133,11,50),
+            0 0 0.8rem rgb(133,11,50),
+            0 0 2.8rem rgb(133,11,50),
+            inset 0 0 1.3rem rgb(133,11,50); 
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    margin: 25px;
+  }
+  .head1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: -2%;
+  }
+  .para1{
+    margin-top: -2%;
+  }
+   .board{
+      border: 0.2rem solid rgb(133,11,50);
+      border-radius: 2rem;
+      padding: 0.4em;
+      box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem rgb(133,11,50),
+            0 0 0.8rem rgb(133,11,50),
+            0 0 2.8rem rgb(133,11,50),
+            inset 0 0 1.3rem rgb(133,11,50); 
+      margin-top: 8%;
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+  
+    </style>
+</head>
+<body style="size:500px; height:auto; background:url('walll.jpeg') no-repeat fixed; background-size:cover">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <section class="header">
+    <div class="tabs">
+   <a href="index.html" >Home</a>
+   <a href="meena.html">Technical Events</a>
+   <a href="meenant.html">Non Technical Events</a>
+   <a href="meenaws.html">Workshop</a>
+   <a href="symcontact.html">Contact</a>
+   </div>
+    <div class="hello">
+        <div class="board"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 class="neon" data-text="U">Je<span class="flicker-slow">o</span>n<span class="flicker-fast">t</span>uz</h1>
+        <h1 class="dept" >Department of Information Technology</h1>
+        </div>
+    </div>
+
+    </section>
+    <section class="content">
+    <div class="bg1">
+	<div class="border">
+	</div>
+    <section id="contentt">
+	<div class ="text">
+    <section id="incon">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="c1"><div class="head1"><h1>About us</h1></div>
+        <div class="para1"><p>National Engineering College, Kovilpatti, Tamil Nadu offers a wide variety of high-quality education and training opportunities for every student, awarding qualifications through the highly reputed Anna University.
+The college offers seven undergraduate and nine postgraduate programs in a wide range of disciplines. NEC is Sprawled in a lush green campus, with an alluring backdrop of an enchanting hillock, in NH7 between Madurai and Tirunelveli. The institute provides an excellent locale for academic pursuits in South Tamilnadu.
+        </p></div></div>
+        </div></section><br>
+        <section id="incon"><div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="c1"><div class="head1"><h1>About the Department</h1></div>
+	    <div class="para1"><p>The B.Tech Information Technology programme was started in the year 2001.The Department also offers M.Tech Information Technology (Information and Cyber Warfare) programme. The Department has stable and experienced staff members. The department is well equipped with advanced laboratories like Network Management Lab, Programming Lab, RDBMS Lab and Software Project Lab.
+
+This department is fully accommodated with modern Hardware and Software accessibility to cater to the academic needs of students and staff. The entire campus is connected through OFC and sophisticated Internet facilities provided for academic and research work.
+
+The faculty members are actively engaged in research activities in the areas like Image Processing, Wireless Communication, Network security, Texture Analysis, Mobile Ad-hoc Networks, Parallel Computing, Artificial Intelligence, Data Mining, Real Time Systems, Distributed and Object Oriented Computing.
+	</p></div>
+    </div></section><br>
+    <section id="incon"><div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    
+        <div class="c1"><div class="head1"><h1>About the event</h1></div>
+        <div class="para1"><p>National Level Inter College Symposium hosted by department of Information Technology in coordination with ITA Association to ensure that any talent shouldn't go unaccounted and to be regarded with reward and recognition. This have always been the motive for TECHIT throughout the years. So once again on the year 2022 this wonderful platform have been created for intellectual minds to exhibit skills on their area of interest and an opportunity to explore and develop in both Social and technical sides.</p>
+    <p><br>Place: National Engineering College, Kovilpatti<br>Date: 5th November<br>Time: 10:00 AM</p></div>
+    </div></section><br>
+    <section id="incon">
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="c1"><div class="head1"><h1>Event Venue</h1></div>
+    <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.067725235835!2d77.82996841410575!3d9.148356289628705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06ae08c6794e85%3A0xea30f98dcb16c4f5!2sNational%20Engineering%20College!5e0!3m2!1sen!2sin!4v1662049619394!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div></section><br>
+    <section id="incon"><div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="c1"><div class="head1"><h1>Contact us</h1></div>
+        <div class="para1"><p1>Vaishmashree I <br> Phone: 8746556964 <br> Email: 2015035@nec.edu.in <br><br></p1>
+        <p1>Navetha S <br> Phone: 8712552496 <br> Email: 2015034@nec.edu.in</p1>
+    </div></div></section><br>
+    </div>
+    </section>
+</div>
+</section>
+<section id="contact">
+    <div class="contact1">
+        <p>National Engineering College</p>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <a class ="icon" href="https://www.instagram.com/necitsm/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class ="icon" href="https://www.facebook.com/people/NECIT/100076657314968/" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a class ="icon" href="https://nec.edu.in/information-technology/" target="_blank">
+            <ion-icon name="logo-google"></ion-icon>
+        </a>
+    </div>
+</section>
+<script>
+    AOS.init({
+  
+  
+})
+</script>
+<script>
+    var div = document.getElementById("contentt");
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeColor(){
+  div.style.backgroundColor= getRandomColor();
+}
+
+setInterval(changeColor,1000);
+</script>
+</body>
+</html>

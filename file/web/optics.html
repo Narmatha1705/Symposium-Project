@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/* ------------ VARIABLES ------------ */
+:root{
+  /* FONT */
+  --font: 'Poppins', sans-serif;
+
+  /* COLORS */
+  --color: #9176FF;
+  --bg-color: #f4f4f4;
+}
+
+/* ------------ BASE ------------ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+
+  /*font-family: var(--font);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-color: #060c21;
+  font-family: 'Poppins', sans-serif;
+}
+  h2{
+        text-decoration: none;
+        color: white;
+        background:linear-gradient(rgb(133,11,50),rgba(115,18,132,255));
+        padding: 7px 10px;
+        border-radius: 4px;  
+        font-size: 19px;
+    }
+    h2:hover{
+		background: linear-gradient(235deg,rgb(133,11,50),rgba(115,18,132,255));
+  }
+    
+    h2:focus{
+        outline: 3px solid linear-gradient(235deg,rgb(133,11,50),#060c21,rgba(115,18,132,255));
+      }
+    
+    .prev{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        font-family: "Malgun Gothic", "Malgun Gothic"
+        
+    }
+
+/* ----------- SLIDER ------------ */
+.swiper{
+  width: 100%;
+  padding-top: 5%;
+  position: absolute;
+}
+
+.swiper-wrapper{
+  width: 100%;
+  height: 35em;
+  display: flex;
+  align-items: center;
+}
+/** {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #82147a;
+  font-family: 'Almarai', sans-serif;
+}*/
+
+.wrap {
+  margin-top: 20%;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main-div {
+  position: relative;
+  margin: 5px;
+  background-color:transparent;
+}
+.button{
+  background-color:transparent;
+  text-decoration: none;
+}
+
+.main-div2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 17px 3px rgb(133,11,50),0 0 4px 2px rgb(133,11,50);
+          box-shadow: 0 0 17px 3px rgb(133,11,50),0 0 4px 2px rgb(133,11,50);
+  z-index: -1;
+  -webkit-animation-name: gradient-shadow;
+          animation-name: gradient-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+h1 {
+  font-size: 20px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #1c1d1f,;
+  
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@-webkit-keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #cd1cbe,0 0 4px 2px #cd1cbe;
+            box-shadow: 0 0 17px 3px #cd1cbe,0 0 4px 2px #cd1cbe;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #fd2727c7,0 0 4px 2px #fd2727c7;
+            box-shadow: 0 0 17px 3px #fd2727c7,0 0 4px 2px #fd2727c7;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #ae00ff,0 0 4px 2px #ae00ff;
+            box-shadow: 0 0 17px 3px #ae00ff,0 0 4px 2px #ae00ff;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #2600ff,0 0 4px 2px #2600ff;
+            box-shadow: 0 0 17px 3px #2600ff,0 0 4px 2px #2600ff;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #ff0040,0 0 4px 2px #ff0040;
+            box-shadow: 0 0 17px 3px #ff0040,0 0 4px 2px #ff0040;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #fd00f5,0 0 4px 2px #fd00f5;
+            box-shadow: 0 0 17px 3px #fd00f5,0 0 4px 2px #fd00f5;
+  }
+}
+
+@keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #cd1cbe,0 0 4px 2px #cd1cbe;
+            box-shadow: 0 0 17px 3px #cd1cbe,0 0 4px 2px #cd1cbe;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #fd2727c7,0 0 4px 2px #fd2727c7;
+            box-shadow: 0 0 17px 3px #fd2727c7,0 0 4px 2px #fd2727c7;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #ae00ff,0 0 4px 2px #ae00ff;
+            box-shadow: 0 0 17px 3px #ae00ff,0 0 4px 2px #ae00ff;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #2600ff,0 0 4px 2px #2600ff;
+            box-shadow: 0 0 17px 3px #2600ff,0 0 4px 2px #2600ff;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #ff0040,0 0 4px 2px #ff0040;
+            box-shadow: 0 0 17px 3px #ff0040,0 0 4px 2px #ff0040;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #fd00f5,0 0 4px 2px #fd00f5;
+            box-shadow: 0 0 17px 3px #fd00f5,0 0 4px 2px #fd00f5;
+  }
+}
+
+.card{
+position: relative;
+width: 20em;
+  height: 90%;
+  background-color: black;
+  border-radius: 1em;
+  box-shadow: 0 0 2em rgba(0,0,0,.2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid rgb(133,11,50);
+box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem rgb(133,11,50),
+            0 0 0.8rem rgb(133,11,50),
+            0 0 2.8rem rgb(133,11,50),
+            inset 0 0 1.3rem rgb(133,11,50);
+  border-radius: 10px;
+  margin: 0 2em;
+
+}
+
+
+
+.card:before{
+  content: '';
+  position: absolute;
+left: -2px;
+right: -2px;
+top: -2px;
+background: #fff;
+bottom: -2px;
+z-index: -1;
+}
+.card:after{
+  content: '';
+  z-index: 5;
+left: -2px;
+right: -2px;
+top: -2px;
+bottom: -1px;
+
+
+filter: blur(40px);
+}
+.card:before,
+.card:after{
+   background: linear-gradient(180deg,rgb(133,11,50),#060c21,rgba(115,18,132,255));
+}
+/*@keyframes card {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}*/
+/*.card span{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background:linear-gradient(235deg, white);
+  background: linear-gradient(235deg,#ff00ccd6,#060c21,#bc08e9dd);
+  background: linear-gradient(235deg,#ff00ccd6,#060c21,#bc08e9dd);
+  z-index: 2;
+}
+.card span::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left : 0;
+  width: 50%;
+  height: 100%;
+  background:linear-gradient(235deg, white);
+  pointer-events: none;
+}*/
+.swiper-slide:not(.swiper-slide-active){
+  filter: blur(1px);
+}
+.text{
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.card__image{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 5px solid rgba(115,18,132,255);
+  padding: 3px;
+  margin-bottom: 2em;
+}
+
+.card__image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.card__title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  font-style: var(--bg-color);
+  top: .2em;
+}
+
+.card__name{
+  color: rgb(133,11,50);
+}
+
+.card__text{
+  text-align: center;
+  font-size: 1rem;
+  margin: 1em 0;
+  color: white;
+}
+
+.card__btn{
+  background-color: var(--color);
+  color: rgb(239, 233, 233);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: .5em;
+  border-radius: .5em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+.rulesnew {
+  /*margin-top: 0px;
+  background-color: #1f41606b;*/
+  color: #fff;
+  margin-top: 30%;
+ /* line-height: 1.5;
+  letter-spacing: 0;
+  font-size: 16px;
+  width: fit-content;
+  font-weight: 200;
+ padding: 1rem;
+  width: auto;
+  border-right: 3px solid #0ff;*/
+}
+p.cyberpunk.inverse {
+  /*padding: 40px 15px 30px;
+  background-color: #1f41606b;*/
+  padding-top: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #fff;
+  text-align: center;
+  /*border-right: 3px solid #0ff;
+  font-size: .9rem;
+  font-weight: 100;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: justify;
+  text-justify: inter-word;
+  border-left: 0px;
+  border-bottom: 0px;*/
+}
+.topic{
+  color: white;
+  padding-top: 3%;
+  text-align: center;
+}
+.texttopic {
+  color: white;
+  text-align: center;
+  padding-top: 70%;
+  /*width: fit-content;
+  background-color: #00ffff0d;
+  padding: 1rem;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  border-left: 3px solid #0ff;
+  font-size: 25px;
+  font-weight: 100;
+  line-height: 1.1;
+  letter-spacing: .17em;
+  font-weight: 900;
+  color: #fff*/
+}
+li {
+  font-size: 15px;
+  color: #fff;
+  margin-left: 5%;
+}
+ 
+/*li {
+  margin: 0px;
+  color: rgb(251, 240, 240);
+  padding: 10px 0px 10px 20px;
+  width: 120px;
+  font-size: 11px
+}*/
+ul {
+  margin-top: 10px;
+  padding: 0px
+}
+.rule{
+  text-align: center;
+  color:#fff;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+}
+.lastrules{
+   text-align: center;
+}
+.incharge{
+  margin-top: 10%;
+  font-family: "Malgun Gothic","Malgun Gothic";
+}
+.rules{
+  margin-top: 10%;
+  margin-left: 5%;
+  color: #fff;
+  font-family: "Malgun Gothic","Malgun Gothic";
+  font-size: 20px;
+}
+.top{
+  margin-top: 30%;
+}
+.text{
+  color: white;
+  text-align: center;
+  position: absolute;
+  padding-top: 5%;
+
+}
+.txt{
+  margin-top: 10%;
+}
+.in{
+
+  font-family: "Malgun Gothic","Malgun Gothic";
+}
+.r{
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 5%;
+  font-family: "Malgun Gothic","Malgun Gothic";
+}
+.tabs {
+  overflow: hidden;
+  background-image:linear-gradient(black,black);
+}
+
+.tabs a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left:2%;
+font-family: "Malgun Gothic", "Malgun Gothic";
+
+}
+
+.tabs a:hover {
+  background-color: black;
+  color: rgb(133,11,50);
+}
+
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+    </style>
+</head>
+<body style="size:500px; height:auto; background:url('walll.jpeg') no-repeat fixed; background-size:cover">
+  <section class="header">
+    <div class="tabs">
+      <a href="index.html" >Home</a>
+      <a href="meena.html">Technical Events</a>
+      <a href="meenant.html">Non Technical Events</a>
+      <a href="meenaws.html">Workshop</a>
+      <a href="symcontact.html">Contact</a>
+   </div>
+   
+
+  <section class="swiper mySwiper">
+    <button class="button"><a href="meenaws.html"><h2>&laquo; Previous</h2></a></button>
+    <div class="swiper-wrapper">
+      
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="op.jpg" alt="card image">
+        </div>
+       
+       <div class="card__content">
+          <span class="card__title">
+          <span class="card__name"></span>
+          <p class="card__text"></p>
+          <div class="topic" value="Optics Workshop">
+            <div style="font-size:23px;font-weight: 700;">Optics Workshop</div>
+          </div>
+                                   <p class="rules">
+                                       
+Get yourself a headstart with this workshop Presenting you with a live hands-on session.                                    
+                                    
+                                    </p>
+                            
+                               
+         <!--- <button class="card__btn"></button>!-->
+        </div>
+      </div>
+
+     <!--<div class="card swiper-slide">
+        <div class="card__image">
+          <img src="op.jpg" alt="card image">
+        </div>
+
+      <div class="card__content">
+          <span class="card__title"></span>
+          <span class="card__name"></span>
+          <p class="card__text"></p>
+          <div class="text" value="Rules">
+            <div style="font-size:23px;font-weight: 700;">Rules</div>
+          </div>
+            <ul class="r">
+            <li>
+                Basic programming knowledge is required
+            </li>
+            <li >
+                Discussion among participants will not be entertained.. 
+                if found so,the team will be disqualified
+            </li>
+            <li >
+                The winner team will determined by the total points of each team
+            </li>
+       </ul>
+      <!--</p>
+          <button class="card__btn"></button>
+        </div>
+      </div>  -->
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="op.jpg" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title"></span>
+          <span class="card__name"></span>
+          <p class="card__text"></p>
+          <!--<ul class="rulesnew lastrules">!-->
+            <div class="txt" value="Incharge" style="color: white;">
+              <div style="font-size:23px;font-weight: 700;">Incharge</div>
+            </div>
+            <ul class="rulesnew">
+
+          <div class="in">
+              
+                  Narmatha N - 9856764524
+             
+          </div>
+            </ul>
+        <!--</ul>
+          <button class="card__btn"></button>!-->
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="op.jpg" alt="card image">
+        </div>
+
+       <div class="card__content">
+          <span class="card__title"></span>
+          <span class="card__name"></span>
+          <p class="card__text"></p>
+          <div class="top" value="Rules" style="color: white;">
+            <div style="font-size:23px;font-weight: 700;">Venue</div>
+          </div>
+          <ul class="rulesnew">
+
+            <div class="incharge">
+                
+                   Auditorium
+               
+            </div>
+              </ul>
+         <!--- <button class="card__btn"></button>!-->
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="op.jpg" alt="card image">
+        </div>
+
+       <div class="card__content">
+          <span class="card__title">
+          <span class="card__name"></span>
+          <p class="card__text"></p>
+          <div class="topic" value="Optics Workshop">
+            <div style="font-size:23px;font-weight: 700;"></div>
+          </div>
+          <div class="wrap">
+            <div class="main-div main-div2">
+             <button class="button"><a href="symform.html"><h1 style="color:white;">Register Now</h1></a></button>
+            </div>
+          </div>
+                                   <!--<p class="rules">
+                                       
+                                        The event would be conducted in Realy manner
+                                    
+                                    </p>!-->
+                            
+                               
+         <!--- <button class="card__btn"></button>!-->
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+</body>
+  </html>
